@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "a11d0398-ed1b-4f23-82d0-6856dc4361b7",
+		"name": "Spring-rest-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://spring-rest-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4b2fb211-73ea-4dc4-943b-7f7ea9069916",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Toom\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://spring-rest-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels?page=0&size=100",
+					"protocol": "http",
+					"host": [
+						"spring-rest-dev",
+						"okd",
+						"45",
+						"116",
+						"216",
+						"140",
+						"xip",
+						"io"
+					],
+					"port": "80",
+					"path": [
+						"example",
+						"v1",
+						"hotels"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://spring-rest-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7c3628d5-1b60-4512-829f-89a23b1a99cd",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"city\": \"Bangkok\",\r\n  \"description\": \"TestPost2\",\r\n  \"id\": 0,\r\n  \"name\": \"Toom2\",\r\n  \"rating\": 0\r\n}"
+				},
+				"url": {
+					"raw": "http://spring-rest-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
+					"protocol": "http",
+					"host": [
+						"spring-rest-dev",
+						"okd",
+						"45",
+						"116",
+						"216",
+						"140",
+						"xip",
+						"io"
+					],
+					"port": "80",
+					"path": [
+						"example",
+						"v1",
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
