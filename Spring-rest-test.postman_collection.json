@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "http://spring-rest-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
+			"name": "http://spring-rest2-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
 			"event": [
 				{
 					"listen": "test",
@@ -47,10 +47,10 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://spring-rest-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels?page=0&size=100",
+					"raw": "http://spring-rest2-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels?page=0&size=100",
 					"protocol": "http",
 					"host": [
-						"spring-rest-dev",
+						"spring-rest2-dev",
 						"okd",
 						"45",
 						"116",
@@ -80,7 +80,7 @@
 			"response": []
 		},
 		{
-			"name": "http://spring-rest-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
+			"name": "http://spring-rest2-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
 			"event": [
 				{
 					"listen": "test",
@@ -116,10 +116,10 @@
 					"raw": "{\r\n  \"city\": \"Bangkok\",\r\n  \"description\": \"TestPost2\",\r\n  \"id\": 0,\r\n  \"name\": \"Toom2\",\r\n  \"rating\": 0\r\n}"
 				},
 				"url": {
-					"raw": "http://spring-rest-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
+					"raw": "http://spring-rest2-dev.okd.45.116.216.140.xip.io:80/example/v1/hotels",
 					"protocol": "http",
 					"host": [
-						"spring-rest-dev",
+						"spring-rest2-dev",
 						"okd",
 						"45",
 						"116",
