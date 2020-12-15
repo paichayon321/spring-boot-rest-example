@@ -14,7 +14,7 @@
 						"id": "50743420-43eb-438b-a1e1-d72ff09989e8",
 						"exec": [
 							"pm.test(\"GetUserList Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(201);",
 							"});",
 							"pm.test(\"Response Janet in Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"Janet\");",
