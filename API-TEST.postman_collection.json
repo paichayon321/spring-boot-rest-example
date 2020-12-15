@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "8455bb1d-f728-43ba-b7c7-62f9f53d502f",
 		"name": "API-TEST",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -79,7 +79,18 @@
 					"mode": "raw",
 					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}"
 				},
-				"url": "https://reqres.in/api/login"
+				"url": {
+					"raw": "https://reqres.in/api/login",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
 			},
 			"response": []
 		}
