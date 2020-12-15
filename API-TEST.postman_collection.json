@@ -13,10 +13,10 @@
 					"script": {
 						"id": "50743420-43eb-438b-a1e1-d72ff09989e8",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
+							"pm.test(\"GetUserList Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Body matches string\", function () {",
+							"pm.test(\"Response Janet in Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"Janet\");",
 							"});"
 						],
@@ -56,10 +56,10 @@
 					"script": {
 						"id": "7e663893-e6c6-4774-b28a-8533240afd73",
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Post Login Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							"pm.test(\"Body matches string\", function () {\r",
+							"pm.test(\"Token return in Body matches string\", function () {\r",
 							"    pm.expect(pm.response.text()).to.include(\"token\");\r",
 							"});"
 						],
