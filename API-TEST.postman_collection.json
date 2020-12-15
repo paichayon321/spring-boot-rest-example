@@ -1,70 +1,88 @@
 {
-	"id": "0f9f7225-b020-e666-c57b-eccb770cb2a8",
-	"name": "API-TEST",
-	"description": "",
-	"order": [
-		"d35cf50f-f1ec-6a5b-5cb0-5b6cc62aa764",
-		"5a2f417a-cef2-8b4f-1ef7-5b0c01a6b801"
-	],
-	"folders": [],
-	"folders_order": [],
-	"timestamp": 1608015474481,
-	"owner": 0,
-	"public": false,
-	"requests": [
+	"info": {
+		"_postman_id": "8455bb1d-f728-43ba-b7c7-62f9f53d502f",
+		"name": "API-TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "5a2f417a-cef2-8b4f-1ef7-5b0c01a6b801",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
+			"name": "GetUserList",
+			"event": [
 				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
+					"listen": "test",
+					"script": {
+						"id": "50743420-43eb-438b-a1e1-d72ff09989e8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Janet\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
-			"url": "https://reqres.in/api/login",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "0f9f7225-b020-e666-c57b-eccb770cb2a8",
-			"data": [],
-			"dataMode": "raw",
-			"name": "https://reqres.in/api/login",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1608015821868,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}"
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=1",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "d35cf50f-f1ec-6a5b-5cb0-5b6cc62aa764",
-			"headers": "",
-			"headerData": [],
-			"url": "",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "0f9f7225-b020-e666-c57b-eccb770cb2a8",
-			"data": null,
-			"dataMode": "params",
-			"name": "API-TEST",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1608015476279,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7e663893-e6c6-4774-b28a-8533240afd73",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}"
+				},
+				"url": "https://reqres.in/api/login"
+			},
+			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
