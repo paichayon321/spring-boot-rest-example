@@ -17,7 +17,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Response Janet in Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"Janet1234\");",
+							"    pm.expect(pm.response.text()).to.include(\"Janet\");",
 							"});"
 						],
 						"type": "text/javascript"
